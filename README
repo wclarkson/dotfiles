@@ -1,0 +1,6 @@
+Each subdirectory in this directory contains a set of configuration files for a
+single tool. In this directory, run `stow vim` or similar to create symlinks in
+your home directory to these config files.
+
+Inspired by:
+http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
