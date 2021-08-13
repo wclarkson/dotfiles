@@ -55,6 +55,10 @@ let g:Powerline_symbols="fancy"
 " || EDITING ||
 " =============
 
+set undofile
+set undodir=~/.vim/undo
+set undolevels=10000
+
 set textwidth=80
 set lw=80
 set wrap
@@ -101,3 +105,15 @@ inoremap <Down>    <NOP>
 inoremap <Left>    <NOP>
 inoremap <Right>   <NOP>
 
+" ===============
+" || SYNTASTIC ||
+" ===============
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_enable_signs = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_haskell_checkers = ['hdevtools', 'hlint']
